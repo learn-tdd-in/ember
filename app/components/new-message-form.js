@@ -8,6 +8,9 @@ export default class NewMessageFormComponent extends Component {
   @action
   handleSend(e) {
     e.preventDefault();
+    if(this.args.onSend) {
+      this.args.onSend(this.message);
+    }
     this.message = '';
   }
 }
