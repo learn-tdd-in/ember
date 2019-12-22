@@ -1,9 +1,13 @@
-<input
-  type="text"
-  data-test-message-text
-/>
-<button
-  data-test-send-message-button
->
-  Send
-</button>
+<form onSubmit={{this.handleSend}}>
+  <Input
+    type="text"
+    @value={{this.message}}
+    data-test-message-text
+  />
+  <button
+    type="submit"
+    data-test-send-message-button
+  >
+    Send
+  </button>
+</form>
