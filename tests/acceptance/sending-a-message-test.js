@@ -12,7 +12,7 @@ module('Acceptance | sending a message', function (hooks) {
     await visit('/');
 
     await fillIn('[data-test-message-text]', message);
-    click('[data-test-send-message-button]');
+    await click('[data-test-send-message-button]');
 
     assert.dom('[data-test-message-text]').hasValue('');
     assert.dom('[data-test-message-list]').hasText(message);
