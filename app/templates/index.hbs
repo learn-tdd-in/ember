@@ -1,2 +1,2 @@
-<NewMessageForm />
-<MessageList />
+<NewMessageForm @onSend={{this.handleSend}} />
+<MessageList @messages={{@model}} />
